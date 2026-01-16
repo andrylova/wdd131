@@ -1,0 +1,174 @@
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #3f3f3f; /*Charcoal */
+    color: #ffffff;
+    text-align: center;
+}
+
+#course-title {
+    display: block;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/*  Navigation */
+nav {
+    background-color: #262626;
+    /* dark gray */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 0;
+}
+
+nav a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Main Layout */
+main {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Card Component */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Card headers */
+.card h2 {
+    background-color: #6b6b6b; /* warm gray */
+    color: #ffffff;
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+}
+
+/* Image Optimization (ALL cards) */
+.card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* About Me Section */
+.about-me {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: flex-start;
+}
+
+.picture {
+    max-width: 140px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+/* Country Section */
+.my-country {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border-top: 1px solid #dddddd;
+}
+
+.my-country img {
+    max-width: 120px;
+    border: 1px solid #999999;
+    flex-shrink: 0;
+}
+
+/* Resources Card */
+.card-body {
+    padding: 1rem;
+}
+
+.card-body ul {
+    padding-left: 1.5rem;
+}
+
+.card-body li {
+    margin-bottom: 0.5rem;
+}
+
+.card-body a {
+    color: #444444;
+}
+
+.card-body a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #3f3f3f;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+#lastModified {
+    color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .about-me,
+    .my-country {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
