@@ -1,0 +1,108 @@
+body {
+  font-family: 'Mulish', sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+header,
+footer {
+  background-color: #1b4d3e;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  display: grid;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.info,
+.weather {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-top: 0;
+  color: #1b4d3e;
+}
+
+.data-grid div,
+.weather-grid div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.value {
+  font-weight: 300;
+}
+
+.weather-grid {
+  display: grid;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-icon {
+  width: 50px;       /* adjust to fit nicely inside the box */
+  height: 50px;      /* optional, keeps it square */
+  object-fit: contain; /* ensures it scales without distortion */
+  display: block;     /* removes small spacing issues under img */
+  margin-bottom: 0.5rem; /* spacing from the text below */
+}
+
+
+@media (min-width: 900px) {
+
+  /* Remove padding so boxes sit on image */
+  .content {
+    padding: 0;
+  }
+
+  /* DATA BOX – top-left on image */
+  .info {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    max-width: 340px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  /* WEATHER BOX – bottom-right on image */
+  .weather {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    max-width: 260px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Make sure hero is tall enough */
+  .hero img {
+    min-height: 500px;
+    object-fit: cover;
+  }
+}

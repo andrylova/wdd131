@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Discover Madagascar – Avenue of the Baobabs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="RATSIATOSIKA Andry">
+  <title>Madagascar | Avenue of the Baobabs</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Madagascar</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/baobab-large.webp" media="(min-width: 900px)">
+        <source srcset="images/baobab-medium.webp" media="(min-width: 500px)">
+        <img src="images/baobab-small.webp" alt="Avenue of the Baobabs in Madagascar">
+      </picture>
+
+      <!-- DATA SECTION -->
+      <section class="info">
+        <h1>Data</h1>
+        <div class="data-grid">
+          <div><span class="label">Area:</span><span class="value">587,041 km²</span></div>
+          <div><span class="label">Population:</span><span class="value">~30 million</span></div>
+          <div><span class="label">Capital:</span><span class="value">Antananarivo</span></div>
+          <div><span class="label">Languages:</span><span class="value">Malagasy, French</span></div>
+          <div><span class="label">Currency:</span><span class="value">Ariary (MGA)</span></div>
+          <div><span class="label">Time Zone:</span><span class="value">UTC +3</span></div>
+          <div><span class="label">Calling Code:</span><span class="value">+261</span></div>
+          <div><span class="label">Internet TLD:</span><span class="value">.mg</span></div>
+          <div><span class="label">Continent:</span><span class="value">Africa</span></div>
+          <div><span class="label">Government:</span><span class="value">Republic</span></div>
+          <div>
+            <span class="label">Major Cities:</span>
+            <span class="value">Antananarivo, Toamasina, Fianarantsoa, Mahajanga, Toliara</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- WEATHER SECTION -->
+      <section class="weather">
+        <h1>Weather</h1>
+        <div class="weather-grid">
+          <img src="images/weather.svg" alt="Weather icon" class="weather-icon">
+
+          <div><span class="label">Temperature:</span><span class="value"><span id="temperature"></span> °C</span></div>
+          <div><span class="label">Wind Speed:</span><span class="value"><span id="windspeed"></span> km/h</span></div>
+          <div><span class="label">Wind Chill:</span><span class="value"><span id="windchill"></span></span></div>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      © <span id="year"></span> | Madagascar <br>
+      Last Modified: <span id="lastModified"></span>
+    </p>
+  </footer>
+
+</body>
+
+</html>
