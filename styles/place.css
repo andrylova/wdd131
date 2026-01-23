@@ -1,15 +1,35 @@
+/* Root variables for colors and font */
+:root {
+  --primary-color: #1b4d3e;
+  --secondary-color: #ffffff;
+  --background-color: #f4f4f4;
+  --label-weight: 600;
+  --value-weight: 300;
+}
+
 body {
   font-family: 'Mulish', sans-serif;
   margin: 0;
-  background-color: #f4f4f4;
+  background-color: var(--background-color);
 }
 
 header,
 footer {
-  background-color: #1b4d3e;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
   padding: 1rem;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 .hero {
@@ -29,14 +49,14 @@ footer {
 
 .info,
 .weather {
-  background: white;
+  background: var(--secondary-color);
   padding: 1.5rem;
   border-radius: 8px;
 }
 
 h2 {
   margin-top: 0;
-  color: #1b4d3e;
+  color: var(--primary-color);
 }
 
 .data-grid div,
@@ -47,11 +67,11 @@ h2 {
 }
 
 .label {
-  font-weight: 600;
+  font-weight: var(--label-weight);
 }
 
 .value {
-  font-weight: 300;
+  font-weight: var(--value-weight);
 }
 
 .weather-grid {
@@ -61,22 +81,18 @@ h2 {
 }
 
 .weather-icon {
-  width: 50px;       /* adjust to fit nicely inside the box */
-  height: 50px;      /* optional, keeps it square */
-  object-fit: contain; /* ensures it scales without distortion */
-  display: block;     /* removes small spacing issues under img */
-  margin-bottom: 0.5rem; /* spacing from the text below */
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-
 @media (min-width: 900px) {
-
-  /* Remove padding so boxes sit on image */
   .content {
     padding: 0;
   }
 
-  /* DATA BOX – top-left on image */
   .info {
     position: absolute;
     top: 1.5rem;
@@ -88,7 +104,6 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   }
 
-  /* WEATHER BOX – bottom-right on image */
   .weather {
     position: absolute;
     bottom: 1.5rem;
@@ -100,7 +115,6 @@ h2 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   }
 
-  /* Make sure hero is tall enough */
   .hero img {
     min-height: 500px;
     object-fit: cover;
