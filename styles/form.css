@@ -93,3 +93,14 @@ fieldset {
     text-align: center;
     font-size: 1.2rem;
 }
+
+@media (max-width: 600px) {
+    main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .stars {
+        font-size: 1.5rem;
+    }
+}

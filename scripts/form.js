@@ -16,3 +16,8 @@ option.value = product.id;
 option.textContent = product.name;
 select.appendChild(option);
 });
+
+// footer dates
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("modified").textContent = document.lastModified;
+

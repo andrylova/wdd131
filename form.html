@@ -1,92 +1,96 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="RATSIATOSIKA Lovamampionona Andry">
-<title>Product Review Form</title>
-<meta name="description"
-    content="Product review form page where users can select a product, rate it with stars, add useful features, and submit a written review with responsive design and JavaScript functionality.">
+<html lang="en">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="Responsive product review form with rating and feedback.">
+    <meta name="author" content="RATSIATOSIKA Lovamampionona Andry">
 
-<link rel="stylesheet" href="styles/form.css">
-<script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
-
 
     <header>
         <h1>Product Review</h1>
     </header>
 
-
     <main>
         <form method="get" action="review.html" class="review-form">
 
-
-            <!-- Product Name -->
+            <!-- Product -->
             <label for="product">Product Name</label>
             <select id="product" name="product" required>
                 <option value="" disabled selected>Select a Product ...</option>
             </select>
 
-
             <!-- Rating -->
             <fieldset>
                 <legend>Overall Rating</legend>
                 <div class="stars">
-                    <input type="radio" id="star5" name="rating" value="5" required><label for="star5">☆</label>
-                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">☆</label>
-                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">☆</label>
-                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">☆</label>
-                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">☆</label>
+                    <input type="radio" id="star5" name="rating" value="5" required>
+                    <label for="star5">☆</label>
+
+                    <input type="radio" id="star4" name="rating" value="4" required>
+                    <label for="star4">☆</label>
+
+                    <input type="radio" id="star3" name="rating" value="3" required>
+                    <label for="star3">☆</label>
+
+                    <input type="radio" id="star2" name="rating" value="2" required>
+                    <label for="star2">☆</label>
+
+                    <input type="radio" id="star1" name="rating" value="1" required>
+                    <label for="star1">☆</label>
                 </div>
             </fieldset>
-
 
             <!-- Date -->
             <label for="installDate">Date of Installation</label>
             <input type="date" id="installDate" name="installDate" required>
 
-
-            <!-- Useful Features -->
+            <!-- Features (≥ 4 required) -->
             <fieldset>
                 <legend>Useful Features</legend>
-                <label><input type="checkbox" id="durable" name="features" value="durable"> Durable</label>
+
+                <input type="checkbox" id="durable" name="features" value="durable">
+                <label for="durable">Durable</label>
+
+                <input type="checkbox" id="design" name="features" value="design">
+                <label for="design">Good Design</label>
+
+                <input type="checkbox" id="quality" name="features" value="quality">
+                <label for="quality">Good Quality</label>
+
+                <input type="checkbox" id="performance" name="features" value="performance">
+                <label for="performance">Fast Performance</label>
+
             </fieldset>
 
-
-            <!-- Written Review -->
+            <!-- Review -->
             <label for="review">Written Review</label>
-            <textarea id="review" name="review" rows="4"></textarea>
+            <textarea id="review" name="review"></textarea>
 
-
-            <!-- User Name -->
+            <!-- Name -->
             <label for="username">Your Name</label>
             <input type="text" id="username" name="username">
 
-
-            <!-- Submit -->
             <input type="submit" value="Submit Review" class="submit-btn">
-
 
         </form>
     </main>
 
-
     <footer>
-        <p>RATSIATOSIKA Andry — WDD131 — <span id="year"></span></p>
+        <p>RATSIATOSIKA Lovamampionona Andry — WDD131 — <span id="year"></span></p>
         <p>Last Modified: <span id="modified"></span></p>
     </footer>
-
-
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        document.getElementById('modified').textContent = document.lastModified;
-    </script>
-
 
 </body>
 
