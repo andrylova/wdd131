@@ -1,0 +1,95 @@
+* {}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f5;
+    margin: 0;
+}
+
+
+header,
+footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+}
+
+
+.review-form label,
+.review-form legend {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: .6rem;
+    margin-top: .4rem;
+}
+
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    font-size: 2rem;
+}
+
+
+.stars input {
+    display: none;
+}
+
+
+.stars label {
+    cursor: pointer;
+    color: #bbb;
+}
+
+
+.stars input:checked~label {
+    color: gold;
+}
+
+
+.submit-btn {
+    background: #4caf50;
+    color: white;
+    border: none;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+.submit-btn:hover {
+    opacity: .9;
+}
+
+
+.confirm {
+    text-align: center;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+
+
+    <main class="confirm">
+        <p>Your review has been submitted successfully.</p>
+        <p>Total Reviews Submitted: <span id="reviewCount"></span></p>
+    </main>
+
+
+    <footer>
+        <p>RATSIATOSIKA Andry — WDD131 — <span id="year"></span></p>
+        <p>Last Modified: <span id="modified"></span></p>
+    </footer>
+
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('modified').textContent = document.lastModified;
+    </script>
+
+
+</body>
+
+</html>
