@@ -1,10 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Travel Guide to Madagascar - Explore beaches, cities, and national parks in Madagascar">
+    <meta name="author" content="RATSIATOSIKA Lovamampionona Andry">
     <title>Destinations - Madagascar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles/travelguide.css">
     <script defer src="scripts/travelguide.js"></script>
 </head>
@@ -23,25 +33,35 @@
     </header>
 
     <main>
+        <section>
+            <h2>Popular Tourist Destinations</h2>
+            <p>
+                Madagascar is home to breathtaking landscapes and unique places to explore. From tropical islands to
+                national parks, and vibrant highland cities, each destination offers a rich combination of natural
+                beauty
+                and cultural experiences. Visitors can snorkel in turquoise waters, trek through rainforests filled with
+                rare wildlife, or immerse themselves in local traditions and cuisine.
+            </p>
+        </section>
+
         <section class="filter">
-            <h2>Filter by Type</h2>
-            <button data-type="All">All</button>
-            <button data-type="Beach">Beaches</button>
-            <button data-type="Park">Parks</button>
-            <button data-type="City">Cities</button>
+            <h2>Filter Destinations</h2>
+            <button data-type="All" aria-label="Show all destinations">All</button>
+            <button data-type="Beach" aria-label="Show only beaches">Beaches</button>
+            <button data-type="Park" aria-label="Show only national parks">Parks</button>
+            <button data-type="City" aria-label="Show only cities">Cities</button>
         </section>
 
         <section class="destinations">
-            <h2>Explore Destinations</h2>
-            <div id="destinations-container">
-                <!-- JS will populate destinations -->
-            </div>
+            <div id="destinations-container"></div>
+            <noscript>
+                <p>Please enable JavaScript to view destinations.</p>
+            </noscript>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Travel Guide to Madagascar</p>
-        <a href="references.html">References</a>
+        <p>&copy; 2026 Travel Guide to Madagascar | <a href="references.html">References</a></p>
     </footer>
 </body>
 

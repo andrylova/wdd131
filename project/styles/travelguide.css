@@ -21,6 +21,7 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -42,11 +43,41 @@ main {
     padding: 1rem;
 }
 
+/* General sections styling */
+section {
+    margin: 2rem 0;
+    /* spacing between sections */
+    padding: 1rem;
+    /* internal padding */
+}
+
+section h2 {
+    font-family: 'Playfair Display', serif;
+    /* match headings */
+    font-size: 2rem;
+    color: #1B5E20;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .hero img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
+
 
 button {
     background-color: #FF7043;
@@ -57,8 +88,10 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+button:hover,
+button:focus {
     background-color: #e65c36;
+    outline: 2px solid #333;
 }
 
 form label {
@@ -76,4 +109,25 @@ form select {
 
 form button {
     width: auto;
+}
+
+.destination {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.destination img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
 }

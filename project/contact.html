@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Madagascar Travel Guide</title>
-    <link rel="stylesheet" href="styles/travelguide.css">
-    <script defer src="scripts/travelguide.js"></script>
-</head>
-
-<body><!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Travel Guide to Madagascar - Contact us with questions or inquiries about visiting Madagascar">
+  <meta name="author" content="RATSIATOSIKA Lovamampionona Andry">
   <title>Contact - Madagascar Travel Guide</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/travelguide.css">
+  <script defer src="scripts/travelguide.js"></script>
 </head>
+
 <body>
   <header>
     <h1>Contact Us</h1>
@@ -35,77 +36,35 @@
     <section>
       <h2>Send Us a Message</h2>
       <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" required>
+        <fieldset>
+          <legend>Contact Form</legend>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" required>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your full name" required>
 
-        <label for="message">Message:</label>
-        <textarea id="message" required></textarea>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-        <label for="topic">Topic:</label>
-        <select id="topic">
-          <option value="destinations">Destinations</option>
-          <option value="culture">Culture</option>
-          <option value="general">General</option>
-        </select>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Type your message here" required></textarea>
 
-        <button type="submit">Submit</button>
+          <label for="topic">Topic:</label>
+          <select id="topic" name="topic">
+            <option value="destinations">Destinations</option>
+            <option value="culture">Culture</option>
+            <option value="general">General</option>
+          </select>
+
+          <button type="submit" aria-describedby="form-feedback">Submit</button>
+        </fieldset>
       </form>
-      <div id="form-feedback"></div>
+      <div id="form-feedback" aria-live="polite"></div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Travel Guide to Madagascar</p>
-    <a href="references.html">References</a>
+    <p>&copy; 2026 Travel Guide to Madagascar | <a href="references.html">References</a></p>
   </footer>
-</body>
-</html>
-
-    <header>
-        <h1>Contact Us</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="destinations.html">Destinations</a></li>
-                <li><a href="culture.html">Culture & Tips</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section>
-            <h2>Send Us a Message</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" required></textarea>
-
-                <label for="topic">Topic:</label>
-                <select id="topic">
-                    <option value="destinations">Destinations</option>
-                    <option value="culture">Culture</option>
-                    <option value="general">General</option>
-                </select>
-
-                <button type="submit">Submit</button>
-            </form>
-            <div id="form-feedback"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Travel Guide to Madagascar</p>
-        <a href="references.html">References</a>
-    </footer>
 </body>
 
 </html>
